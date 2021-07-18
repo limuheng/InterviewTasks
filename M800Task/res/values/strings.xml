@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">M800Task</string>
+    <string name="primary_title">iTunes Search</string>
+    <string name="secondary_title">Result Count:</string>
+    <string name="no_data">No data</string>
+    <string name="close">close</string>
+</resources>

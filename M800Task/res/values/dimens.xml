@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="list_margin">6dp</dimen>
+    <dimen name="list_divider_height">5dp</dimen>
+
+    <dimen name="cardview_corner_radius">3dp</dimen>
+    <dimen name="cardview_card_elevation">3dp</dimen>
+
+    <dimen name="item_image_height">100dp</dimen>
+    <dimen name="item_text_padding">8dp</dimen>
+
+    <dimen name="primary_text_size">20sp</dimen>
+    <dimen name="secondary_text_size">12sp</dimen>
+    <dimen name="dlg_title_size">16sp</dimen>
+
+    <dimen name="trackview_margin">16dp</dimen>
+    <dimen name="trackview_img_size">120dp</dimen>
+    <dimen name="trackview_padding">10dp</dimen>
+</resources>
