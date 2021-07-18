@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="githubUser"
+            type="com.muheng.media17task.data.GithubUser" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="3dp"
+        android:background="@color/color2x2">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:imageUrl="@{githubUser.avatarUrl}"
+            android:layout_margin="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="@{githubUser.login}"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+
+        <ImageView
+            android:id="@+id/rating_star"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_rating_star"
+            android:layout_margin="10dp"
+            android:layout_below="@id/avatar"
+            android:layout_alignTop="@id/score"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(githubUser.score)}"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/rating_star"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:id="@+id/perm_identify"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_perm_identity"
+            android:layout_margin="10dp"
+            android:layout_below="@id/rating_star"
+            android:layout_alignTop="@id/type"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="@{githubUser.type}"
+            android:layout_below="@id/score"
+            android:layout_toRightOf="@id/perm_identify"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+                android:id="@+id/repository"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_repos"
+                android:layout_margin="10dp"
+                android:layout_below="@id/perm_identify"
+                android:layout_alignTop="@id/repos_url"
+                android:layout_alignParentLeft="true"/>
+
+        <TextView
+                android:id="@+id/repos_url"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@{githubUser.reposUrl}"
+                android:layout_below="@id/type"
+                android:layout_toRightOf="@id/repository"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="githubUser"
+            type="com.muheng.media17task.data.GithubUser" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/color2x1">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:imageUrl="@{githubUser.avatarUrl}"
+            android:layout_margin="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="@{githubUser.login}"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+
+        <ImageView
+            android:id="@+id/rating_star"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_rating_star"
+            android:layout_margin="10dp"
+            android:layout_below="@id/avatar"
+            android:layout_alignTop="@id/score"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(githubUser.score)}"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/rating_star"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+</layout>
