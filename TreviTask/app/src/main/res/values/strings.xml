@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TreviTask</string>
+
+    <string name="col">Col</string>
+    <string name="row">Row</string>
+    <string name="draw">Draw</string>
+    <string name="random">random</string>
+    <string name="btn_text">OK</string>
+</resources>
